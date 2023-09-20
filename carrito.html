@@ -6,18 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <style>
+        .navbar {
+            background: rgb(69, 69, 69);
+        }
+        #logof {
+            color: rgb(255, 165, 89);
+        }
+        #nav3rys {
+            color: rgb(255, 165, 89);
+        }
+        #orenge {
+            color: rgb(255, 165, 89);
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: rgb(255, 230, 199);
+        }
+        .fuuter {
+            margin-top: auto;
+            background: rgb(69, 69, 69);
+        }
+        #card1 {
+            background: rgba(255, 165, 89, 0.7);
+            
+        }
+        
+
     </style>
   </head>
   <body>        
     <!--COMIENZO NAVBAR-->
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <div class="col-2 d-flex justify-content-start">
-                <a class="navbar-brand" href="index.html">Fukusuke </a>
+                <a class="navbar-brand" id="logof" href="index.html"><img src="sushilogosinnegro.png" alt="Avatar Logo" style="width:40px;"> Fukusuke</a>
             </div>
-            <button class="navbar-toggler d-lg-none d-xl-none" type="button" data-bs-toggle="collapse"
+            <button class="navbar-toggler d-lg-none d-xl-none" id="nav3rys" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -25,20 +54,20 @@
                 <div class="col-7">
                     <ul class="navbar-nav col-12 d-flex justify-content-center">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" id="logof" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="menu.html">Menu</a>
+                            <a class="nav-link" id="logof" href="menu.html">Menu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">Contactanos</a>
+                            <a class="nav-link" id="logof" href="contacto.html">Contactanos</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-3 ms-auto">
                     <ul class="navbar-nav col-12 d-flex justify-content-end">
                         <li class="nav-item">
-                            <a class="nav-link" href="carrito.html"><i class="bi bi-cart-fill"></i>Carrito</a>
+                            <a class="nav-link" id="logof" href="carrito.html"><i class="bi bi-cart-fill"></i>Carrito</a>
                         </li>
                         <li>
                             <div class="d-flex justify-content-end">
@@ -61,12 +90,12 @@
                 <hr class="hr" />
                 <div class="card-body">
                     <!--COMIENZO IMAGEN 1-->
-                    <div class="container border my-5">
+                    <div class="container border border-dark rounded my-5 p-2" id="card1">
                         <div class="row">
                             <div class="col-xxl-3 col-lg-3 col-md-3 col-sm-12">
-                                <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
-                                    <img src="#"
-                                    class="w-100" alt="Sushi X" />
+                                <div>
+                                    <img src="sushitest.png"
+                                    class="w-100 w3-hover-opacity" alt="Sushi X" />
                                     <a href="#!">
                                         <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
                                     </a>
@@ -95,6 +124,7 @@
                             </div>
                             <div class="col-xxl-1 col-lg-1 col-md-1 col-sm-12">
                                 <p class="text-start">Precio</p>
+                                <p>15000clp</p>
 
                             </div>
                         </div>
@@ -230,32 +260,32 @@
             <!--FIN CHECKOUT-->
         </div>         
     </div>
-    <footer class="text-white bg-dark py-4 px-5">
+    <footer class="fuuter">
             <div class="container text-center text-md-start ">
               <!-- Grid row -->
               <div class="row mt-3">
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-3 col-xl-3 col-sm-6 mx-auto mb-4">
                   <!-- Content -->
-                  <h6 class="text-uppercase fw-bold mb-4">
+                  <h6 class="text-uppercase fw-bold mb-4" id="orenge">
                     Fukusuke
                   </h6>
-                  <p>
+                  <p class="text-white">
                     Descripcion del restaurant
                   </p>
                 </div>
                 <div class="col-md-2 col-lg-3 col-xl-3 col-sm-6 mb-4">
                     <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4" id="orenge">
                       Horarios
                     </h6>
-                    <p>
+                    <p class="text-white">
                       <a href="#!" class="text-reset">Lu a Vi: XX:XX - XX:XX</a>
                     </p>
-                    <p>
+                    <p class="text-white">
                       <a href="#!" class="text-reset">Sabado: XX:XX - XX:XX</a>
                     </p>
-                    <p>
+                    <p class="text-white">
                       <a href="#!" class="text-reset">Domingo: cerrado</a>
                     </p>
                   </div>
@@ -263,13 +293,13 @@
                   <!-- Grid column -->
                 <div class="col-md-3 col-lg-3 col-xl-3 col-sm-6 mb-4">
                     <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4" id="orenge">
                     Sobre nosotros
                     </h6>
-                    <p>
+                    <p class="text-white">
                     <a href="#!" class="text-reset">Copyright</a>
                     </p>
-                    <p>
+                    <p class="text-white">
                     <a href="#!" class="text-reset">Creado 2023</a>
                     </p>
                 </div>
@@ -277,14 +307,14 @@
                 <!-- Grid column -->
                 <div class="col-md-4 col-lg-3 col-xl-3 col-sm-6 mb-4">
                     <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">Contacto</h6>
-                    <p><i class="fas fa-home "></i> En cierta Calle en STGO, n°, CL</p>
-                    <p>
+                    <h6 class="text-uppercase fw-bold mb-4" id="orenge">Contacto</h6>
+                    <p class="text-white"><i class="fas fa-home "></i> En cierta Calle en STGO, n°, CL</p>
+                    <p class="text-white">
                     <i class="fas fa-envelope"></i>
                     Mañanasinfalta@unsiete.cl
                     </p>
-                    <p><i class="fas fa-phone "></i> + 56977777777</p>
-                    <p><i class="fas fa-print "></i> + 02 23456789</p>
+                    <p class="text-white"><i class="fas fa-phone "></i> + 56977777777</p>
+                    <p class="text-white"><i class="fas fa-print "></i> + 02 23456789</p>
                 </div>
                 <!-- Grid column -->
             </div>
