@@ -21,11 +21,25 @@
         #orenge {
             color: rgb(255, 165, 89);
         }
+        #hrcolor {
+            border-color: black;
+            color: black;
+        }
+        #sel1 {
+            color: black;
+            background: rgba(255, 165, 89, 0.1);
+            border-color: black;
+        }
         body {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             background: rgb(255, 230, 199);
+        }
+        #bgimg2 {
+            background-image: url(palitos.png);
+            background-repeat: no-repeat;
+            background-position: left -200px top 0px
         }
         .fuuter {
             margin-top: auto;
@@ -35,7 +49,14 @@
             background: rgba(255, 165, 89, 0.7);
             
         }
-        
+        #card2 {
+            background: rgba(255, 165, 89, 0.1); 
+        }
+        #btncheck {
+            background: rgba(255, 96, 0, 0.5);
+            border-color: black;
+            color: black;
+        }
 
     </style>
   </head>
@@ -81,184 +102,196 @@
         <!--FIN NAVBAR-->
     </nav>
     <!--COMIENZO CARRITO DE COMPRAS-->
-    <div class="container p-5 my-5"><!--Eliminar border, solo lo utilizo para medir ms-5 es el problema para la responsividad -->
-        <div class="row">
-            <div class="col-xxl-10 col-lg-8 col-md-9 col-sm-12">
-                <div class="row">
-                    <div class="col-xxl-4 col-lg-12 col-md-12 col-sm-12 p-1 ms-1 fs-5 fw-bold">Tu carrito de compras</div> 
-                </div>
-                <hr class="hr" />
-                <div class="card-body">
-                    <!--COMIENZO IMAGEN 1-->
-                    <div class="container border border-dark rounded my-5 p-2" id="card1">
-                        <div class="row">
-                            <div class="col-xxl-3 col-lg-3 col-md-3 col-sm-12">
-                                <div>
-                                    <img src="sushitest.png"
-                                    class="w-100 w3-hover-opacity" alt="Sushi X" />
-                                    <a href="#!">
-                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
-                                    </a>
+    <div id="bgimg2">
+        <div class="container p-5 my-5"><!--Eliminar border, solo lo utilizo para medir ms-5 es el problema para la responsividad -->
+            <div class="row">
+                <div class="col-xxl-10 col-lg-8 col-md-9 col-sm-12">
+                    <div class="row">
+                        <div class="col-xxl-4 col-lg-12 col-md-12 col-sm-12 p-1 ms-1 fs-5 fw-bold">Tu carrito de compras</div> 
+                    </div>
+                    <hr class="hr" id="hrcolor" />
+                    <div class="card-body">
+                        <!--COMIENZO IMAGEN 1-->
+                        <div class="container border border-dark rounded my-5 p-2" id="card1">
+                            <div class="row">
+                                <div class="col-xxl-3 col-lg-3 col-md-3 col-sm-12">
+                                    <div>
+                                        <img src="sushitest.png"
+                                        class="w-100 w3-hover-opacity" alt="Sushi X" />
+                                        <a href="#!">
+                                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-xxl-4 col-lg-4 col-md-4 col-sm-12">
-                                <div class="fs-5">Compra n</div>    
-                                <div class="fs-6">descripcion producto</div>
-                            </div>
-                            <div class="col-xxl-3 col-lg-3 col-md-3 col-sm-12">
-                                <div class="col-xxl-6 col-lg-6 col-sm-12">
-                                    <form action="/action_page.php">
-                                        <div class="col-xxl-6 col-lg-6 col-md-6 col-sm-9">
-                                            <label for="sel1" class="form-label">Cantidad:</label>
-                                        </div>
-                                        <div class="col-xxl-6 col-lg-6 col-md-6 col-sm-3">
-                                            <select class="form-select" id="sel1" name="sellist1">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            </select>
-                                        </div>
-                                    </form>
+                                <div class="col-xxl-4 col-lg-4 col-md-4 col-sm-12">
+                                    <div class="fs-5">Compra n</div>    
+                                    <div class="fs-6">descripcion producto</div>
+                                    <div class="fs-6">descripcion producto</div>
+                                    <div class="fs-6">descripcion producto</div>
+                                    <div class="fs-6">descripcion producto</div>
+                                    <div class="fs-6">descripcion producto</div>
+                                    <div class="fs-6">descripcion producto</div>
                                 </div>
-                            </div>
-                            <div class="col-xxl-1 col-lg-1 col-md-1 col-sm-12">
-                                <p class="text-start">Precio</p>
-                                <p>15000clp</p>
+                                <div class="col-xxl-3 col-lg-3 col-md-3 col-sm-12">
+                                    <div class="col-xxl-6 col-lg-6 col-sm-12">
+                                        <form action="/action_page.php">
+                                            <div class="col-xxl-6 col-lg-6 col-md-6 col-sm-9">
+                                                <label for="sel1" class="form-label">Cantidad:</label>
+                                            </div>
+                                            <div class="col-xxl-6 col-lg-6 col-md-6 col-sm-3">
+                                                <select class="form-select" id="sel1" name="sellist1">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                </select>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-1 col-lg-1 col-md-1 col-sm-12">
+                                    <p class="text-start">Precio</p>
+                                    <p>15000clp</p>
 
+                                </div>
                             </div>
                         </div>
+                        <!--FIN IMAGEN 1-->    
                     </div>
-                    <!--FIN IMAGEN 1-->    
+                    
+                    <div class="card-body">
+                        <!--COMIENZO IMAGEN 2-->
+                        <div class="container border border-dark rounded" id="card1">
+                            <div class="row">
+                                <div class="col-xxl-3 col-lg-3 col-md-3 col-sm-12">
+                                    <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
+                                        <img src="sushitest.png"
+                                        class="w-100 w3-hover-opacity"  alt="Sushi X" />
+                                        <a href="#!">
+                                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-4 col-lg-4 col-md-4 col-sm-12">
+                                    <div class="fs-5">Compra n</div>    
+                                    <div class="fs-6">descripcion producto</div>
+                                    <div class="fs-6">descripcion producto</div>
+                                    <div class="fs-6">descripcion producto</div>
+                                    <div class="fs-6">descripcion producto</div>
+                                    <div class="fs-6">descripcion producto</div>
+                                    <div class="fs-6">descripcion producto</div>
+                                </div>
+                                <div class="col-xxl-3 col-lg-3 col-md-3 col-sm-12">
+                                    <div class="col-xxl-6 col-lg-6 col-md-6 col-sm-12">
+                                        <form action="/action_page.php">
+                                            <div class="col-xxl-6 col-lg-6 col-md-6 col-sm-9">
+                                                <label for="sel1" class="form-label">Cantidad:</label>
+                                            </div>
+                                            <div class="col-xxl-6 col-lg-6 col-md-6 col-sm-3">
+                                                <select class="form-select" id="sel1" name="sellist1">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                </select>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-1 col-lg-1 col-md-1 col-sm-12">
+                                    <p class="text-start">Precio</p>
+                                    <p>10000clp</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--FIN IMAGEN 2-->
+                    </div>
                 </div>
+                <!--COMIENZO CHECKOUT-->
+                <div class="col-xxl-2 col-lg-4 col-md-3 col-sm-12">
+                    <div class="col-xxl-12 col-lg-12 col-md-12">
+                        <div class="card-header my-3">
+                            <p class="text-center fw-bold">Detalle</p>
+                            <hr class="hr" id="hrcolor" />
+                        </div>
+                    </div>
+                    <div class="col-xxl-12 col-lg-12 col-md-12">  
+                        <div class="card-body border border-dark p-2" id="card1">
+                            <ul class="list-group list-group-flush ">
+                                <li
+                                    class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0" id="card2">
+                                    Productos
+                                    <span>$$$</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center border-dark px-0" id="card2" > <!--bg-warning-->
+                                    Envio
+                                    <span>Gratis</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3" id="card2">
+                                    <div>
+                                    <p class="fs-6">Monto total</p>
                 
-                <div class="card-body">
-                    <!--COMIENZO IMAGEN 2-->
-                    <div class="container border">
-                        <div class="row">
-                            <div class="col-xxl-3 col-lg-3 col-md-3 col-sm-12">
-                                <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
-                                    <img src="#"
-                                    class="w-100" alt="Sushi X" />
-                                    <a href="#!">
-                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-xxl-4 col-lg-4 col-md-4 col-sm-12">
-                                <div class="fs-5">Compra n</div>    
-                                <div class="fs-6">descripcion producto</div>
-                            </div>
-                            <div class="col-xxl-3 col-lg-3 col-md-3 col-sm-12">
-                                <div class="col-xxl-6 col-lg-6 col-md-6 col-sm-12">
-                                    <form action="/action_page.php">
-                                        <div class="col-xxl-6 col-lg-6 col-md-6 col-sm-9">
-                                            <label for="sel1" class="form-label">Cantidad:</label>
-                                        </div>
-                                        <div class="col-xxl-6 col-lg-6 col-md-6 col-sm-3">
-                                            <select class="form-select" id="sel1" name="sellist1">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            </select>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="col-xxl-1 col-lg-1 col-md-1 col-sm-12">
-                                <p class="text-start">Precio</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!--FIN IMAGEN 2-->
-                </div>
-            </div>
-            <!--COMIENZO CHECKOUT-->
-            <div class="col-xxl-2 col-lg-4 col-md-3 col-sm-12">
-              <div class="col-xxl-12 col-lg-12 col-md-12">
-                  <div class="card-header my-3">
-                      <p class="text-center fw-bold">Detalle</p>
-                      <hr class="hr hr-color-dark" />
-                  </div>
-              </div>
-              <div class="col-xxl-12 col-lg-12 col-md-12">  
-                  <div class="card-body border border-dark p-2">
-                      <ul class="list-group list-group-flush ">
-                          <li
-                            class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                            Productos
-                            <span>$$$</span>
-                          </li>
-                          <li class="list-group-item d-flex justify-content-between align-items-center px-0 "> <!--bg-warning-->
-                            Envio
-                            <span>Gratis</span>
-                          </li>
-                          <li
-                            class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3 ">
-                            <div>
-                              <p class="fs-6">Monto total</p>
-          
-                              <p class="fs-6">(incluye IVA)</p>
-                              
-                            </div>
-                            <span>$$$</span>
-                          </li>
-                        </ul>
-                        <div class="text-center">
-                          <button type="button" class="btn btn-success btn-block" data-bs-toggle="modal" data-bs-target="#Detalle">
-                              Checkout
-                          </button>
-                          <!--INICIO Cuadro que aparece sobre la pagina para realizar el pago-->
-                          <div id="Detalle" class="modal fade">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
-                                    <div class="modal-body">
-                                        <div class="col-xxl-12 col-lg-12 col-sm-12 position-relative">
-                                            <button type="button" class="btn-close btn-close-dark position-absolute end-0" data-bs-dismiss="modal"></button>
-                                        </div>
-                                        <div class="col-xxl-12 col-lg-12 col-sm-12 my-4 text-center">
-                                            <h4>Detalle de Compra</h1>
-                                        </div>
-                                        <div class="col-xxl-12 col-lg-12 col-sm-12">
-                                            <div class="row">
-                                                <div class="col-xxl-6 col-lg-6 col-sm-6">
-                                                    <p class="fs-6">Monto total con envio</p>
+                                    <p class="fs-6">(incluye IVA)</p>
+                                    
+                                    </div>
+                                    <span>$$$</span>
+                                </li>
+                                </ul>
+                                <div class="text-center">
+                                <button type="button" class="btn btn-success btn-block" data-bs-toggle="modal" data-bs-target="#Detalle" id="btncheck">
+                                    Checkout
+                                </button>
+                                <!--INICIO Cuadro que aparece sobre la pagina para realizar el pago-->
+                                <div id="Detalle" class="modal fade">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <div class="col-xxl-12 col-lg-12 col-sm-12 position-relative">
+                                                    <button type="button" class="btn-close btn-close-dark position-absolute end-0" data-bs-dismiss="modal"></button>
                                                 </div>
-                                                <div class="col-xxl-3 col-lg-3 col-sm-3">
-                                                    <p class="fw-bold fs-6">$$$</p>
+                                                <div class="col-xxl-12 col-lg-12 col-sm-12 my-4 text-center">
+                                                    <h4>Detalle de Compra</h1>
+                                                </div>
+                                                <div class="col-xxl-12 col-lg-12 col-sm-12">
+                                                    <div class="row">
+                                                        <div class="col-xxl-6 col-lg-6 col-sm-6">
+                                                            <p class="fs-6">Monto total con envio</p>
+                                                        </div>
+                                                        <div class="col-xxl-3 col-lg-3 col-sm-3">
+                                                            <p class="fw-bold fs-6">$$$</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xxl-12 col-lg-12 col-sm-12">
+                                                    <div class="row">
+                                                        <div class="col-xxl-5 col-lg-5 col-sm-5">
+                                                            <label for="sel1" class="form-label">Medio de pago:</label>
+                                                        </div>
+                                                        <div class="col-xxl-5 col-lg-5 col-sm-5">
+                                                            <select class="form-select text-start " id="sel1" name="sellist1">
+                                                            <option>Medio de pago</option>    
+                                                            <option>Servipag</option>
+                                                            <option>Transferencia bancaria</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>                                       
+                                                <div class="col-xxl-12 col-lg-12 col-sm-12 py-3">
+                                                    <a href="#" type="button" class="btn btn-success btn-block">Proceder al pago</a>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-xxl-12 col-lg-12 col-sm-12">
-                                            <div class="row">
-                                                <div class="col-xxl-5 col-lg-5 col-sm-5">
-                                                    <label for="sel1" class="form-label">Medio de pago:</label>
-                                                </div>
-                                                <div class="col-xxl-5 col-lg-5 col-sm-5">
-                                                    <select class="form-select text-start " id="sel1" name="sellist1">
-                                                    <option>Medio de pago</option>    
-                                                    <option>Servipag</option>
-                                                    <option>Transferencia bancaria</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>                                       
-                                        <div class="col-xxl-12 col-lg-12 col-sm-12 py-3">
-                                            <a href="#" type="button" class="btn btn-success btn-block">Proceder al pago</a>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                          </div>
-                          <!--FIN Cuadro que aparece sobre la pagina para realizar el pago-->
-                        </div>    
-                  </div>
+                                <!--FIN Cuadro que aparece sobre la pagina para realizar el pago-->
+                                </div>    
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <!--FIN CHECKOUT-->
-        </div>         
+                <!--FIN CHECKOUT-->
+            </div>         
+        </div>
     </div>
     <footer class="fuuter">
             <div class="container text-center text-md-start ">
@@ -322,3 +355,4 @@
     </footer>
   </body>
 </html>
+
