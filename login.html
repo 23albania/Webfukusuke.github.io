@@ -1,10 +1,11 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
     <!-- Required meta tags -->
     <title>Login</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -18,38 +19,83 @@
         .mr-2 {
             margin-right: 20px !important;
         }
+        .navbar {
+            background: rgb(69, 69, 69);
+        }
+        #logof {
+            color: rgb(255, 165, 89);
+        }
+        #nav3rys {
+            color: rgb(255, 165, 89);
+        }
+        #orenge {
+            color: rgb(255, 165, 89);
+        }
+        #greye {
+            color: rgb(69, 69, 69);
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: rgb(255, 230, 199);
+        }
+        #fuuter {
+            margin-top: auto;
+            background: rgb(69, 69, 69);
+        }
+        #exampleInputEmail1 {
+            background-color: rgb(255, 230, 199);
+            border-color: black;
+        }
+        #exampleInputPassword1 {
+            background-color: rgb(255, 230, 199);
+            border-color: black;
+        }
+        #botoniniciar {
+            background-color: rgb(69, 69, 69);
+            color: rgb(255, 165, 89);
+        }
+        #botonredes {
+            background-color: rgb(69, 69, 69);
+            color: white;
+        }
+        #linkspg:hover {
+            background: rgb(92, 90, 90);
+            border-radius: 5px;
+          }
     </style>
 
-    <title>Login</title>
+    
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <div class="col-2 d-flex justify-content-start">
-                <a class="navbar-brand" href="index.html">Fukusuke </a>
+                <a class="navbar-brand" id="logof" href="index.html"><img src="sushilogosinnegro.png" alt="Avatar Logo" style="width:40px;"> Fukusuke</a>
             </div>
-            <button class="navbar-toggler d-lg-none d-xl-none" type="button" data-bs-toggle="collapse"
+            <button class="navbar-toggler d-lg-none d-xl-none" id="nav3rys" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="col-7">
                     <ul class="navbar-nav col-12 d-flex justify-content-center">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                        <li class="nav-item" id="linkspg">
+                            <a class="nav-link" id="logof" href="index.html">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="menu.html">Menu</a>
+                        <li class="nav-item" id="linkspg">
+                            <a class="nav-link" id="logof" href="menu.html">Menu</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">Contactanos</a>
+                        <li class="nav-item" id="linkspg">
+                            <a class="nav-link" id="logof" href="contacto.html">Contactanos</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-3 ms-auto">
                     <ul class="navbar-nav col-12 d-flex justify-content-end">
                         <li class="nav-item">
-                            <a class="nav-link" href="carrito.html"><i class="bi bi-cart-fill"></i>Carrito</a>
+                            <a class="nav-link active"  id="logof" href="carrito.html"><i class="bi bi-cart-fill"></i>Carrito</a>
                         </li>
                         <li>
                             <div class="d-flex justify-content-end">
@@ -59,9 +105,10 @@
                         </li>
                     </ul>
                 </div>
+            </div>
         </div>
         <!--FIN NAVBAR-->
-    </nav> 
+    </nav>
     <section>
         <div class="row g-0">
             <div class="col-xl-7 col-lg-6 col-md-12 col-sm-12">
@@ -75,25 +122,25 @@
             </div>
             <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 py-2 d-flex flex-column align-items-end">
                 <div class="px-5 p-4 w-100 align-self-center">
-                    <h1 class="text-dark"> Bienvenido a Fukusuke!</h1>
+                    <h1 id="greye"> Bienvenido a Fukusuke!</h1>
                     <form class="mb-5">
                         <div class="mb-4">
                             <label for="exampleInputEmail1" class="text-dark form-label">Correo electronico</label>
-                            <input type="email" class="form-control bg-white" placeholder="Ingresa tu email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <input type="email" class="form-control" placeholder="Ingresa tu email" id="exampleInputEmail1" aria-describedby="emailHelp">
                         </div>
                         <div class="mb-4">
                             <label for="exampleInputPassword1" class="text-dark form-label">Contraseña</label>
-                            <input type="password" class="form-control bg-white mb-2" placeholder=" Ingrese su contraseña"  id="exampleInputPassword1">
+                            <input type="password" class="form-control mb-2" placeholder=" Ingrese su contraseña"  id="exampleInputPassword1">
                             <a href="#" id="emailHelp" class="form-text text-decoration-none">¿Has olvidado tu contraseña?</a>
                         </div>
 
-                        <button type="submit" class="btn btn-primary w-100">Iniciar sesion</button>
+                        <button type="submit" class="btn w-100" id="botoniniciar">Iniciar sesion</button>
                     </form>
 
                     <p class=" text-dark text-center">O inicia sesion con</p>
                     <div class="d-flex justify-content-around">
-                        <button type="submit" class="btn btn-dark flex-grow-1 mr-2"><i class="fa-brands fa-google lead mr-2"></i> Google</button>
-                        <button type="submit" class="btn btn-dark flex-grow-1 ml-2"><i class="fa-brands fa-facebook lead mr-2"></i> Facebook</button>
+                        <a href="https://accounts.google.com/login" class="btn flex-grow-1 mr-2" id="botonredes"><i class="bi bi-google lead mr-2"></i> Google</a>
+                        <a href="https://www.facebook.com" class="btn flex-grow-1 ml-2" id="botonredes"><i class="bi bi-facebook lead mr-2"></i> Facebook</a>
                     </div>
                     <div class="text-center">
                         <p class=" text-dark d-inline-block">¿Todavia no tienes una cuenta?</p> <a href="registro.html" class="text-dark">Crea una ahora</a>
@@ -102,7 +149,7 @@
             </div>
         </div>
     </section>
-    <footer class="text-white bg-dark py-4 px-5">
+    <footer class="text-white py-4 px-5" id="fuuter">
         <section class="">
             <div class="container text-center text-md-start ">
               <!-- Grid row -->
@@ -110,7 +157,7 @@
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-3 col-xl-3 col-sm-6 mx-auto mb-4">
                   <!-- Content -->
-                  <h6 class="text-uppercase fw-bold mb-4">
+                  <h6 class="text-uppercase fw-bold mb-4" id="orenge">
                     Fukusuke
                   </h6>
                   <p>
@@ -119,7 +166,7 @@
                 </div>
                 <div class="col-md-2 col-lg-3 col-xl-3 col-sm-6 mb-4">
                     <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4" id="orenge">
                       Horarios
                     </h6>
                     <p>
@@ -136,7 +183,7 @@
                   <!-- Grid column -->
                 <div class="col-md-3 col-lg-3 col-xl-3 col-sm-6 mb-4">
                     <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4" id="orenge">
                     Sobre nosotros
                     </h6>
                     <p>
@@ -150,7 +197,7 @@
                 <!-- Grid column -->
                 <div class="col-md-4 col-lg-3 col-xl-3 col-sm-6 mb-4">
                     <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">Contacto</h6>
+                    <h6 class="text-uppercase fw-bold mb-4" id="orenge">Contacto</h6>
                     <p><i class="fas fa-home "></i> En cierta Calle en STGO, n°, CL</p>
                     <p>
                     <i class="fas fa-envelope"></i>
