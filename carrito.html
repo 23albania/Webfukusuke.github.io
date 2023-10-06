@@ -37,9 +37,10 @@
             background: rgb(255, 230, 199);
         }
         #bgimg2 {
-            background-image: url(palitos.png);
-            background-repeat: no-repeat;
-            background-position: left -200px top 0px
+            background-color: transparent;
+            background-image: url(palitos.png), url(sushitest.png);
+            background-repeat: no-repeat, no-repeat;
+            background-position: left -200px top 0px, right -130px bottom -110px;
         }
         .fuuter {
             margin-top: auto;
@@ -57,7 +58,14 @@
             border-color: black;
             color: black;
         }
-
+        #linkspg:hover {
+            background: rgb(92, 90, 90);
+            border-radius: 5px;
+          }
+        .active {
+            background: rgb(58, 57, 57);
+            border-radius: 5px;
+        }
     </style>
   </head>
   <body>        
@@ -74,13 +82,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="col-7">
                     <ul class="navbar-nav col-12 d-flex justify-content-center">
-                        <li class="nav-item">
+                        <li class="nav-item" id="linkspg">
                             <a class="nav-link" id="logof" href="index.html">Home</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" id="linkspg">
                             <a class="nav-link" id="logof" href="menu.html">Menu</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" id="linkspg">
                             <a class="nav-link" id="logof" href="contacto.html">Contactanos</a>
                         </li>
                     </ul>
@@ -88,7 +96,7 @@
                 <div class="col-3 ms-auto">
                     <ul class="navbar-nav col-12 d-flex justify-content-end">
                         <li class="nav-item">
-                            <a class="nav-link" id="logof" href="carrito.html"><i class="bi bi-cart-fill"></i>Carrito</a>
+                            <a class="nav-link active"  id="logof" href="carrito.html"><i class="bi bi-cart-fill"></i>Carrito</a>
                         </li>
                         <li>
                             <div class="d-flex justify-content-end">
@@ -98,6 +106,7 @@
                         </li>
                     </ul>
                 </div>
+            </div>
         </div>
         <!--FIN NAVBAR-->
     </nav>
@@ -161,7 +170,7 @@
                     
                     <div class="card-body">
                         <!--COMIENZO IMAGEN 2-->
-                        <div class="container border border-dark rounded" id="card1">
+                        <div class="container border border-dark rounded p-2" id="card1">
                             <div class="row">
                                 <div class="col-xxl-3 col-lg-3 col-md-3 col-sm-12">
                                     <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
